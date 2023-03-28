@@ -20,9 +20,22 @@ const Navbar = () => {
   const showNavBar = () => {
     setActive('navBarMenu showNavBar')
   } 
+
   const removeNavBar = () => {
     setActive('navBarMenu')
   }
+
+  //Let me add a background color to the second Navbar
+
+  const [noBg, addBg] = useState('navBarTwo')
+  const addBgColor = () => {
+    if(window.scrollY >= 10){
+      addBg('navBarTwo navbar_With_Bg')
+    }else{
+      addBg('navBarTwo')
+    }
+  } 
+  window.addEventListener('scroll', addBgColor)
   return (
     <div className='navBar flex'>
       <div className="navBarOne flex">
@@ -42,7 +55,7 @@ const Navbar = () => {
         </div>
       </div>
 
-      <div className="navBarTwo flex">
+      <div className={noBg}>
         <div className="logoDiv">
           <img src={logo} className='Logo' />
         </div>
