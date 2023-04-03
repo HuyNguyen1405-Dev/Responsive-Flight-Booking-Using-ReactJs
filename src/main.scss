@@ -61,9 +61,9 @@ li{
     align-items: center;
 }
 
-// .none{
-//     display: none;
-// }
+.none{
+    display: none;
+}
 
 .btn{
     padding: .7rem 1.5rem;
@@ -103,6 +103,7 @@ h2{
     padding: 1rem 0;
     color:var(--blackColor);
 }
+
 
 // navBar section styling ========>
 
@@ -282,7 +283,7 @@ h2{
                 border-radius: 3rem;
                 width: 80%;
                 text-align: center;
-
+                cursor: pointer;
                 &:hover{
                     background:var(--PrimaryColor);
                     color:var(--whiteColor);
@@ -913,7 +914,7 @@ h2{
 
     //Navbar section styling ======>
 
-    .navbar{
+    .navBar{
         align-items: center;
         
         .navBarOne{
@@ -925,28 +926,345 @@ h2{
                     font-size: 13px;
                     gap: .5rem;
                     color: var(--textColor);
+
+                    &:hover{
+                        color: var(--PrimaryColor);
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+
+        .navBarTwo{
+            justify-content: space-between;
+            align-items: center;
+
+            .logoDiv{
+                .Logo{
+                    width: 10%; 
+                }
+            }
+
+            .menu{
+                flex-direction: row;
+                gap: 0.5rem;
+
+                .listItem{
+                    padding: 0 .5rem;
+                    font-size: 14px;
+                    cursor: pointer;
+                    color:var(--textColor);
+                    font-weight: 700;
+
+                    &:hover{
+                        color: var(--PrimaryColor);
+                        font-weight: 700;
+                    }
+                }
+            }
+
+            .btnOne, .toggleIcon{
+                display: none;
+            }
+        }
+    }
+   //Search styling section 
+
+   .search{
+    .sectionContainer{
+        .btns{
+            width: 70%;
+            border-radius: 3rem;
+            flex-direction: row;
+        }
+        .searchInputs{
+            grid-template-columns: repeat(4,1fr);
+
+            .singleInput{
+                .texts{
+                    input{
+                        width: 100%;
+                    }
                 }
             }
         }
     }
-    .home{
-        .mainText{
-            width: 80%;
+}
+
+    //Support section styling ======>
+    .support{
+        .sectionContainer{
+         .infoDiv{
+            display:grid;
+            grid-template-columns: repeat(2,1fr);
+            gap: 2rem;
+            margin-top: 5rem;
+
+             .textDiv{
+                 margin-top: 0rem;
+                 grid-template-columns: repeat(1,1fr);
+             } 
+         }
+        } 
+     }
+
+     //info section styling =====>
+
+     .info{
+        .infoContainer{
+            padding: 0 6rem;
+          .titleDiv{
+            width:90%;
+            margin: auto;
+            align-items: center;
+
+          } 
+          .cardsDiv{
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            
+            .singleCard{
+                max-width: 260px;
+                padding: 3rem 1rem;
+            }
+          }
         }
-        
-        .homeImages{
-            .videoDiv{
-                width: 80%;
-                .video{
-                    height: 100%;
-                    width: 100%;
-                    border-radius: 15rem;     
+     }
+
+      //Lounger section styling ======>
+     
+      .lounge{
+        .sectionContainer{
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            
+            .imgDiv{
+                width: 300px;
+            }
+            .textDiv{
+                grid-area: 1;
+                .grids{
+                    display: grid;
+                    grid-template-columns: repeat(2,1fr);
                 }
             }
-            .plane{
-                width: 85%;
-                top: -45%;
+        }
+     }
+
+      //Travel Section ====>
+
+    .travelers{
+        .sectionContainer{
+            .travelersContainer{
+                display: grid;
+                grid-template-columns: repeat(3,1fr);
+            }
+        }
+    }
+
+ }
+
+ @media screen and (min-width: 960px) {
+     //Home section =======>
+
+     .home{
+        padding-top: 13rem;
+        .mainText{
+            width: 70%;
+            padding-bottom: 1.5rem;
+            font-size: 22px;
+            line-height: 4rem;
+        }
+        
+    }
+
+    //Search styling section 
+
+   .search{
+    .sectionContainer{
+        .searchInputs{
+            grid-template-columns: repeat(5,1fr);
+        }
+    }
+    }
+
+    //Travel Section ====>
+
+    .travelers{
+        .sectionContainer{
+            .travelersContainer{
+                display: grid;
+                grid-template-columns: repeat(4,1fr);
             }
         }
     }
  }
+
+ @media screen and (min-width: 1024px){
+    //Default Styling
+
+    p{
+        font-size: 15px;
+        line-height: 25px;
+    }
+
+    h4{
+       font-size: 20px;
+    }
+
+    h2{
+        font-size: 25px;
+    }
+    .section{
+        padding: 4rem 0 4rem;
+    }
+    .container{
+        width: 75%;
+        margin: auto;
+    }
+
+     //Navbar section styling ======>
+
+     .navBar{
+        .navBarOne, .navBarTwo {
+            padding-bottom: 1.5rem 1.5rem;   
+        }
+
+        .navbar_With_Bg{
+            padding: 0 5rem;
+
+        }
+    }
+
+    //Home section styling ======>
+
+    .home{
+        .mainText{
+            width: 60%;
+            font-size: 25px !important;
+            line-height: 4rem;
+        }
+
+        .homeImages{
+            .videoDiv{
+                width: 90%;
+                height: 300px;
+
+                .video{
+                    height: 100%;
+                    width: 100%;
+                    object-fit: cover;
+                    border-radius: 15rem;
+                }
+            }
+
+            .plane{
+                width: 100%;
+                top: -80%;
+            }
+        }
+    }
+
+
+     //Search styling section 
+
+   .search{
+    .sectionContainer{
+        .btns{
+            width: 50%;
+        }
+    }
+    }
+ }
+ @media screen and (min-width: 1106px){
+    .home{
+        .homeImages{
+            .plane{
+                width: 90%;
+                top: -95%;
+            }
+        }
+    }
+
+    //Sub section styling ======>
+    .subscribe{
+        .sectionContainer{
+            max-width: 60%;
+        }
+    } 
+}
+@media screen and (min-width: 1332px){
+    //Navbar section styling =====>
+
+    .navBar{
+        .navBarTwo{
+            .menu{
+                gap: 1rem;
+
+                .listItem{
+                    padding: 0 1.5rem;
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+
+    .home{
+        .homeImages{
+            .plane{
+                width: 90%;
+                top: -95%;
+            }
+        }
+    }
+
+     //Support section styling ======>
+     .support{
+        .sectionContainer{
+         .infoDiv{
+            gap: 1rem;
+
+             .textDiv{
+                .singleInfo{
+                    p{
+                        max-width: 500px;
+                    }
+                }
+             } 
+         }
+        } 
+    }
+     //Subscribe section styling =====>
+
+    .subscribe{
+        .sectionContainer{
+            max-width: 50%;
+        }
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .home{
+        .homeImages{
+            .plane{
+                width: 90%;
+                top:-130%;
+            }
+        }
+    }
+}
+
+::selection{
+    background: var(--PrimaryColor);
+    color: var(--whiteColor);
+}
+
+::-webkit-scrollbar{
+    width: 10px;
+    background: var(--greyBg);
+}
+
+::-webkit-scrollbar-thumb{
+    background: var(--PrimaryColor);
+    border-radius: 10px;
+}

@@ -62,6 +62,10 @@ li {
   align-items: center;
 }
 
+.none {
+  display: none;
+}
+
 .btn {
   padding: 0.7rem 1.5rem;
   background: var(--PrimaryColor);
@@ -253,6 +257,7 @@ h2 {
   border-radius: 3rem;
   width: 80%;
   text-align: center;
+  cursor: pointer;
 }
 .search .sectionContainer .btns .singleBtn:hover {
   background: var(--PrimaryColor);
@@ -709,31 +714,221 @@ h2 {
   }
 }
 @media screen and (min-width: 768px) {
-  .navbar {
+  .navBar {
     align-items: center;
   }
-  .navbar .navBarOne .none {
+  .navBar .navBarOne .none {
     display: flex !important;
     gap: 1.5rem;
   }
-  .navbar .navBarOne .none li {
+  .navBar .navBarOne .none li {
     font-size: 13px;
     gap: 0.5rem;
     color: var(--textColor);
   }
+  .navBar .navBarOne .none li:hover {
+    color: var(--PrimaryColor);
+    text-decoration: none;
+  }
+  .navBar .navBarTwo {
+    justify-content: space-between;
+    align-items: center;
+  }
+  .navBar .navBarTwo .logoDiv .Logo {
+    width: 10%;
+  }
+  .navBar .navBarTwo .menu {
+    flex-direction: row;
+    gap: 0.5rem;
+  }
+  .navBar .navBarTwo .menu .listItem {
+    padding: 0 0.5rem;
+    font-size: 14px;
+    cursor: pointer;
+    color: var(--textColor);
+    font-weight: 700;
+  }
+  .navBar .navBarTwo .menu .listItem:hover {
+    color: var(--PrimaryColor);
+    font-weight: 700;
+  }
+  .navBar .navBarTwo .btnOne, .navBar .navBarTwo .toggleIcon {
+    display: none;
+  }
+  .search .sectionContainer .btns {
+    width: 70%;
+    border-radius: 3rem;
+    flex-direction: row;
+  }
+  .search .sectionContainer .searchInputs {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .search .sectionContainer .searchInputs .singleInput .texts input {
+    width: 100%;
+  }
+  .support .sectionContainer .infoDiv {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    margin-top: 5rem;
+  }
+  .support .sectionContainer .infoDiv .textDiv {
+    margin-top: 0rem;
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .info .infoContainer {
+    padding: 0 6rem;
+  }
+  .info .infoContainer .titleDiv {
+    width: 90%;
+    margin: auto;
+    align-items: center;
+  }
+  .info .infoContainer .cardsDiv {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .info .infoContainer .cardsDiv .singleCard {
+    max-width: 260px;
+    padding: 3rem 1rem;
+  }
+  .lounge .sectionContainer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .lounge .sectionContainer .imgDiv {
+    width: 300px;
+  }
+  .lounge .sectionContainer .textDiv {
+    grid-area: 1;
+  }
+  .lounge .sectionContainer .textDiv .grids {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .travelers .sectionContainer .travelersContainer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media screen and (min-width: 960px) {
+  .home {
+    padding-top: 13rem;
+  }
   .home .mainText {
-    width: 80%;
+    width: 70%;
+    padding-bottom: 1.5rem;
+    font-size: 22px;
+    line-height: 4rem;
+  }
+  .search .sectionContainer .searchInputs {
+    grid-template-columns: repeat(5, 1fr);
+  }
+  .travelers .sectionContainer .travelersContainer {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+@media screen and (min-width: 1024px) {
+  p {
+    font-size: 15px;
+    line-height: 25px;
+  }
+  h4 {
+    font-size: 20px;
+  }
+  h2 {
+    font-size: 25px;
+  }
+  .section {
+    padding: 4rem 0 4rem;
+  }
+  .container {
+    width: 75%;
+    margin: auto;
+  }
+  .navBar .navBarOne, .navBar .navBarTwo {
+    padding-bottom: 1.5rem 1.5rem;
+  }
+  .navBar .navbar_With_Bg {
+    padding: 0 5rem;
+  }
+  .home .mainText {
+    width: 60%;
+    font-size: 25px !important;
+    line-height: 4rem;
   }
   .home .homeImages .videoDiv {
-    width: 80%;
+    width: 90%;
+    height: 300px;
   }
   .home .homeImages .videoDiv .video {
     height: 100%;
     width: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
     border-radius: 15rem;
   }
   .home .homeImages .plane {
-    width: 85%;
-    top: -45%;
+    width: 100%;
+    top: -80%;
   }
+  .search .sectionContainer .btns {
+    width: 50%;
+  }
+}
+@media screen and (min-width: 1106px) {
+  .home .homeImages .plane {
+    width: 90%;
+    top: -95%;
+  }
+  .subscribe .sectionContainer {
+    max-width: 60%;
+  }
+}
+@media screen and (min-width: 1332px) {
+  .navBar .navBarTwo .menu {
+    gap: 1rem;
+  }
+  .navBar .navBarTwo .menu .listItem {
+    padding: 0 1.5rem;
+    font-size: 14px;
+  }
+  .home .homeImages .plane {
+    width: 90%;
+    top: -95%;
+  }
+  .support .sectionContainer .infoDiv {
+    gap: 1rem;
+  }
+  .support .sectionContainer .infoDiv .textDiv .singleInfo p {
+    max-width: 500px;
+  }
+  .subscribe .sectionContainer {
+    max-width: 50%;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .home .homeImages .plane {
+    width: 90%;
+    top: -130%;
+  }
+}
+::-moz-selection {
+  background: var(--PrimaryColor);
+  color: var(--whiteColor);
+}
+::selection {
+  background: var(--PrimaryColor);
+  color: var(--whiteColor);
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  background: var(--greyBg);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--PrimaryColor);
+  border-radius: 10px;
 }/*# sourceMappingURL=main.css.map */

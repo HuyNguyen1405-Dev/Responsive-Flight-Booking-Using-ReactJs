@@ -35,7 +35,7 @@ const Navbar = () => {
   };
   window.addEventListener("scroll", addBgColor);
   return (
-    <div className="navBar flex">
+    <div className='navBar flex'>
       <div className="navBarOne flex">
         <div>
           <SiConsul className="icon" />
